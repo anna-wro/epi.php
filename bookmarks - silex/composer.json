@@ -1,0 +1,25 @@
+{
+    "name": "Test Silex project",
+    "description": "Test Silex project",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9",
+        "silex/silex": "^2.0"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "scripts": {
+        "webserver-run": [
+            "echo 'Started web server on http://localhost:8000'",
+            "php -S localhost:8000 -t web"
+        ],
+        "post-install-cmd": [
+            "@webserver-run"
+        ],
+        "post-update-cmd": [
+            "@webserver-run"
+        ]
+    }
+}
