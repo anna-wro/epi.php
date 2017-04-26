@@ -33,4 +33,11 @@ $app->get(
     }
 );
 
+$app->get(
+    '/{message}/{name}',
+    function ($name, $message) use ($app) {
+        return $app->escape($message)." ".$app->escape($name);
+    }
+);
+
 $app->run();
