@@ -10,10 +10,7 @@ require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
 $app = new Silex\Application();
 $app['debug'] = true;
 
-use Model\Bookmarks\Arr\Bookmarks;
-
-$bookmarksModel = new Bookmarks();
-
+// dla pustego geta
 $app->get(
     '/',
     function () use ($app) {
@@ -21,26 +18,25 @@ $app->get(
     }
 );
 
+// gdy nie podamy imienia
 $app->get(
-    '/bookmarks/',
-     function () use ($app, $bookmarksModel) {
-       var_dump($bookmarksModel->findAll());
-
-       return '';
+    '/hello/',
+    function () use ($app) {
+        $app->abort('404!');
     }
 );
 
 $app->get(
-    '/bookmarks/{id}',
-    function ($id) use ($app, $bookmarksModel) {
-        $bookmark = $bookmarksModel ->findOneById($id);
-        if (!$bookmark || !count($bookmark)) {
-            $app->abort('404');
-        } else {
-            var_dump($bookmark);
+    '/hello/{name}',
+    function ($name) use ($app) {
+        return 'Hello '.$app->escape($name);
+    }
+);
 
-            return '';
-        }
+$app->get(
+    '/{message}/{name}',
+    function ($name, $message) use ($app) {
+        return $app->escape($message)." ".$app->escape($name);
     }
 );
 
