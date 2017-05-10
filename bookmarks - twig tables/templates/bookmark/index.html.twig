@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}{# jakby coś już tu było #}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block title %}
+    Bookmarks
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Bookmarks
+    </h1>
+    {% if bookmarks|length %}
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>URL</th>
+                <th>tag</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for bookmark in bookmarks %}
+            <tr>
+                <td>
+                    {{ bookmark.title }}
+                </td>
+                <td>
+                    {{ bookmark.url }}
+                </td>
+                <td>
+                    <ul class="tag__list">
+                        {% for tag in bookmark.tags %}
+                            <li class="tag__item">{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+        {#<ul>#}
+            {#{% for row in bookmarks %}#}
+                {#<li>{{ row.title }}, {{ row.url }}</li>#}
+            {#{% endfor %}#}
+        {#</ul>#}
+    {% else %}
+        <div>
+            Bookmarks not found!
+        </div>
+    {% endif %}
+{% endblock %}
