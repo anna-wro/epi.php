@@ -1,0 +1,29 @@
+{
+    "name": "Test Silex project",
+    "description": "Test Silex project",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9",
+        "silex/silex": "^2.0",
+        "twig/twig": "^1.33",
+        "symfony/asset": "^3.2",
+        "symfony/twig-bridge": "^3.2",
+        "twbs/bootstrap": "^3.3"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "scripts": {
+        "run": [
+            "echo 'Started web server on http://localhost:8000'",
+            "php -S localhost:8000 -t web"
+        ],
+        "post-install-cmd": [
+            "@run"
+        ],
+        "post-update-cmd": [
+            "@run"
+        ]
+    }
+}
