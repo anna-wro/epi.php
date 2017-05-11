@@ -10,3 +10,4 @@
 * [Bookmarks with Twig :bird:](https://github.com/anna-wro/epi.php/tree/master/bookmarks%20with%20twig)
 * [Bookmarks - Twigowe tabelki :full_moon:](https://github.com/anna-wro/epi.php/tree/master/bookmarks%20-%20twig%20tables)
 * [Bookmarks - Bootstrap & Controllers](https://github.com/anna-wro/epi.php/tree/master/bookmarks%20-%20controllers)
+* [Silex Skeleton z zajęć](https://github.com/anna-wro/epi.php/tree/master/Silex%20Skeleton)
