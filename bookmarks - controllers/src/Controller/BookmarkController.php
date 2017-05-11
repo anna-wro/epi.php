@@ -30,7 +30,7 @@ class BookmarkController implements ControllerProviderInterface
     {
         $controller = $app['controllers_factory'];
         $controller->get('/', [$this, 'indexAction']);
-        $controller->get('/{id}', [$this, 'singleBookmark']);
+        $controller->get('/{id}', [$this, 'viewAction']);
 
         return $controller;
     }
@@ -52,7 +52,16 @@ class BookmarkController implements ControllerProviderInterface
         );
     }
 
-    public function singleBookmark(Application $app, Request $request)
+     /**
+     * View action.
+     *
+     * @param \Silex\Application                        $app     Silex application
+     * @param \Symfony\Component\HttpFoundation\Request $request Request object
+     *
+     * @return string Response
+     */
+    
+    public function viewAction(Application $app, Request $request)
     {
         $id = $request->get('id', '');
         $bookmarkModel = new Bookmarks();
