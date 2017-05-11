@@ -42,6 +42,7 @@ class HelloController implements ControllerProviderInterface
      */
     public function connect(Application $app)
     {
+        // definiujemy jakiemu kawałkowi ścieżki odpowiada jaka akcja
         $controller = $app['controllers_factory'];
         $controller->get('/{name}', [$this, 'indexAction']);
 
@@ -58,7 +59,7 @@ class HelloController implements ControllerProviderInterface
      */
     public function indexAction(Application $app, Request $request)
     {
-        $name = $request->get('name', '');
+        $name = $request->get('name', ''); // (nazwa zmiennej, co się ma stać jak nie znajdę)
 
         return $app['twig']->render('hello/index.html.twig', ['name' => $name]);
     }
