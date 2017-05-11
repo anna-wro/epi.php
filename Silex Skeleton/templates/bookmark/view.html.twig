@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Bookmark {{ bookmarkId }}
+{% endblock %}
+
+{% block body %}
+    <h1>Bookmark {{ bookmarkId }}</h1>
+
+
+    {% if bookmark|length %}
+
+        <table>
+            <thead>
+            <tr>
+                <th>{{'Title'|upper }}</th> {# twigowy text-transform: uppercase #}
+                <th>URL</th>
+                <th>tag</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    {{ bookmark.title }}
+                </td>
+                <td>
+                    {{ bookmark.url }}
+                </td>
+                <td>
+                    <ul class="tag__list">
+                        {% for tag in bookmark.tags %}
+                            <li class="tag__item">{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    {% else %}
+        <div>
+            This bookmark does not exist!
+        </div>
+    {% endif %}
+{% endblock %}
