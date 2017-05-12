@@ -1,6 +1,6 @@
 # Zajęcia ze :elephant:
 
-> Zawsze twórz swój kod z myślą, że będzie go później czytać psychopata, który wie, gdzie mieszkasz
+> #### Zawsze twórz swój kod z myślą, że będzie go później czytać psychopata, który wie, gdzie mieszkasz
 
 * [Prawie puste](https://github.com/anna-wro/epi.php/tree/master/starting%20point)
 * [Przestrzenie nazw](https://github.com/anna-wro/epi.php/tree/master/przestrzenie%20nazw)
