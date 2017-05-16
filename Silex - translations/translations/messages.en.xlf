@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="title.bookmarks_list">
+                <source>title.bookmarks_list</source>
+                <target>Bookmarks List</target>
+            </trans-unit>
+             <trans-unit id="title.bookmark_view">
+                <source>title.bookmark_view</source>
+                <target>Bookmark #%id%</target>
+            </trans-unit>
+            <trans-unit id="bookmark_table.title">
+                <source>bookmark_table.title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="bookmark_table.url">
+                <source>bookmark_table.url</source>
+                <target>URL</target>
+            </trans-unit>
+            <trans-unit id="bookmark_table.tag">
+                <source>bookmark_table.tag</source>
+                <target>Tags</target>
+            </trans-unit>
+            <trans-unit id="bookmars_not_found">
+                <source>bookmars_not_found</source>
+                <target>Bookmarks not found</target>
+            </trans-unit>
+            <trans-unit id="bookmark_not_found">
+                <source>bookmark_not_found</source>
+                <target>This bookmark does not exist!</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
