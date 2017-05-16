@@ -12,3 +12,4 @@
 * [Bookmarks - Bootstrap & Controllers](https://github.com/anna-wro/epi.php/tree/master/bookmarks%20-%20controllers)
 * [Silex Skeleton z zajęć](https://github.com/anna-wro/epi.php/tree/master/Silex%20Skeleton)
 * [Silex - translations :earth_africa:](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20translations)
+* [Silex - odnośniki w aplikacji :link:](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20odno%C5%9Bniki)
