@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}{# jakby coś już tu było #}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block title %}
+    {{ 'tags_list'|trans }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>
+        {{ 'tags_list'|trans }}
+    </h1>
+
+    {% if tags|length %}
+        <table>
+            <thead>
+            <tr>
+                <th>{{ 'tag_name'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for tag in tags %}
+            <tr>
+                <td>
+                    {{ tag.id }}
+                </td>
+                <td>
+                    {{ tag.name }}
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div>
+            {{ 'tags_not_found'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}
