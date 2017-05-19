@@ -13,3 +13,4 @@
 * [Silex Skeleton z zajęć](https://github.com/anna-wro/epi.php/tree/master/Silex%20Skeleton)
 * [Silex - translations :earth_africa:](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20translations)
 * [Silex - odnośniki w aplikacji :link:](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20odno%C5%9Bniki)
+* [Silex - doctrine DBAL](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20doctrine%20DBAL)
