@@ -1,6 +1,6 @@
-### Tak na przyszłość / WINDOWS:
+### WINDOWS:
 
-XAMPP → start MySQL → [opcje](http://localhost/phpmyadmin/) 
+XAMPP → start MySQL & Apache → [opcje](http://localhost/phpmyadmin/) 
 * utworzyć usera student
 * importować tabele (.sql)
 
