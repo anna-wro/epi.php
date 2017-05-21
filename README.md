@@ -17,7 +17,7 @@
 
 ***
 
-### :black_joker: Uruchamianie serwera bez aktualizowania composera: 
+### Uruchamianie serwera bez aktualizowania composera: 
 
     composer run-script run
   
@@ -32,4 +32,4 @@
         }
       }
 
-i voilà.
+i voilà :tophat: :rabbit:.
