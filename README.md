@@ -15,21 +15,23 @@
 * [Silex - odnośniki w aplikacji :link:](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20odno%C5%9Bniki)
 * [Silex - doctrine DBAL](https://github.com/anna-wro/epi.php/tree/master/Silex%20-%20doctrine%20DBAL)
 
+
+
 ***
 
-### Uruchamianie serwera bez aktualizowania composera: 
+### Uruchamianie serwera bez aktualizowania composera :rabbit2: 
 
     composer run-script run
   
   działa bez przechodzenia do `app`. Wystarczy w katalogu projektu (u mnie epi.php) utworzyć `composer.json` o treści: 
   
-        {
-        "scripts": {
-          "run": [
-            "echo 'Started web server on http://localhost:8888'",
-            "php -S localhost:8888 -t app/web"
-          ]
-        }
+      {
+       "scripts": {
+         "run": [
+           "echo 'Started web server on http://localhost:8888'",
+           "php -S localhost:8888 -t app/web"
+        ]
+       }
       }
 
-i voilà :tophat: :rabbit:.
+i voilà :sparkles:.
