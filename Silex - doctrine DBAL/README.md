@@ -1,4 +1,4 @@
-Tak na przyszłość / WINDOWS:
+### Tak na przyszłość / WINDOWS:
 
 XAMPP → start MySQL → [opcje](http://localhost/phpmyadmin/) 
 * utworzyć usera student
