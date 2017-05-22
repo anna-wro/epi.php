@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title%}
+    {{ 'title.bookmark_view'|trans({'%id%': bookmarkId}) }}
+{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.bookmark_view'|trans({'%id%': bookmarkId}) }}
+    </h1>
+
+    <a href="{{ url('bookmark_index') }}" title="{{ 'label.back_to_list'|trans }}">
+        {{ 'label.back_to_list'|trans }}
+    </a>
+
+    {% if bookmark|length %}
+        <div>
+            {#{{ bookmark.title }}, {{ bookmark.url }}#}
+            <table>
+                <thead>
+                <tr>
+                    <th>{{ 'bookmark_table.title'|trans|upper }}</th>
+                    <th>{{ 'bookmark_table.url'|trans|upper }}</th>
+                    <th>{{ 'bookmark_table.tag'|trans|upper }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        {{ bookmark.title }}
+                    </td>
+                    <td>
+                        {{ bookmark.url }}
+                    </td>
+                    <td>
+                        <ul>
+                            {% for tag in bookmark.tags %}
+                                <li class="tag"> {{ tag }} </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div>
+            {{ 'error_not.found'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title%}
+    {#{{ 'title.bookmark_view'|trans({'%id%': bookmarkId}) }}#}
+{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.tag'|trans({'%id%': tagId}) }}
+    </h1>
+    </a>
+
+    {% if tag|length %}
+        <div>
+            {#{{ bookmark.title }}, {{ bookmark.url }}#}
+            <table>
+                <thead>
+                <tr>
+                    <th>Tag: Nazwa, Id</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        {{ tag.name }}
+                    </td>
+                    <td>
+                        {{ tag.id }}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div>
+            {{ 'error_not.found'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

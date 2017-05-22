@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block title %}
+    Tags
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {#{{ 'title.bookmarks_list'|trans }}#}
+    </h1>
+
+    {% if paginator.data|length %}
+    {#{% if tags|length %}#}
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for tag in paginator.data %}
+                {#{% for tag in tags %}#}
+                    <tr>
+                        <td>
+                            {{  tag.name }}
+                        </td>
+                        <td>
+                            {{ tag.id }}
+                        </td>
+                        {#<td>#}
+                            {#<a href="{{ url('bookmark_view', {'id': bookmark.id-1}) }}" title="{{ 'label.view'|trans }}">#}
+                                {#{{ 'label.view'|trans }}#}
+                            {#</a>#}
+                            {#<a href="{{ url('bookmark_view', {'id': loop.index0}) }}" title="{{ 'label.view'|trans }}">#}
+                                {#{{ 'label.view'|trans }}#}
+                            {#</a>#}
+                        {#</td>#}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div>
+            {{ 'error_not.found'|trans }}
+        </div>
+    {% endif %}
+    {#{{ parent() }} wyswietli to, co jest w base.html.twig w body// w#}
+
+{% include 'default/_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'tag_index_paginated',
+} %}
+
+{% endblock %}
