@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.tag_view'|trans({'%id%': tagId}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ 'title.tag_view'|trans({'%id%': tagId}) }}
+    </h1>
+
+    {% if tag|length %}
+        <table>
+            <thead>
+            <tr>
+                <th>{{ 'tag_name'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{ tag.id }}
+                    </td>
+                    <td>
+                        {{ tag.name }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    {% else %}
+        <div>
+            {{ 'tag_not_found'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

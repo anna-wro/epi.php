@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}{# jakby coś już tu było #}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block title %}
+    {{ 'title.tags_list'|trans }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>
+        {{ 'title.tags_list'|trans }}
+    </h1>
+
+    {% if paginator.data|length %}
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>{{ 'tag_name'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for tag in paginator.data %}
+                <tr>
+                    <td>
+                        {{ tag.id }}
+                    </td>
+                    <td>
+                        {{ tag.name }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div>
+            {{ 'tags_not_found'|trans }}
+        </div>
+    {% endif %}
+    {% include 'default/_paginator.html.twig' with {
+    paginator: paginator,
+    route_name: 'tag_index_paginated',
+    } %}
+{% endblock %}
