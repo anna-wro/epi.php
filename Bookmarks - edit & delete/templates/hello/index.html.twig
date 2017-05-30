@@ -1,0 +1,16 @@
+{#
+ Parameters:
+ name: name to say hello to
+#}
+
+{% extends 'base.html.twig' %}
+
+{%  block title %}
+    {{ parent() }} | Hello World!
+{%  endblock title %}
+
+{% block body %}
+<h1>
+    Hello {{ name|default('World') }}!
+</h1>
+{% endblock %}

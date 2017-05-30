@@ -1,0 +1,37 @@
+h1 {
+    color: crimson;
+    margin: 5%;
+}
+
+table {
+    margin-left: 5%;
+}
+
+th {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+td {
+    padding-left: 15px;
+}
+
+
+.table__link {
+    display: block;
+    padding-top: 20px;
+    margin-left: 10px;
+    color: #375ed8;
+    text-decoration: none;
+}
+
+.table__link:hover {
+    color: crimson;
+    text-decoration: none;
+}
+
+.table__link--detail {
+    max-width: 400px;
+    text-align: right;
+}
