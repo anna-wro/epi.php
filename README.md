@@ -23,7 +23,7 @@
 
 ### Uruchamianie serwera bez aktualizowania composera :rabbit2: 
 
-    composer run-script run
+    composer run
   
   działa bez przechodzenia do `app`. Wystarczy w katalogu projektu (u mnie epi.php) utworzyć `composer.json` o treści: 
   
