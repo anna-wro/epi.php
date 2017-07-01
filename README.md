@@ -18,6 +18,7 @@
 * [Bookmarks - edit & delete :thermometer:](https://github.com/anna-wro/epi.php/tree/master/Bookmarks%20-%20edit%20%26%20delete)
 * [Bookmarks - walidacja :pill:](https://github.com/anna-wro/epi.php/tree/master/Bookmarks%20-%20walidacja)
 * [Własny walidator](https://github.com/anna-wro/epi.php/tree/master/w%C5%82asny%20walidator)
+* [Bookmarks - final 💜](https://github.com/anna-wro/epi.php/tree/master/Bookmarks%20-%20final)
 
 ***
 
